@@ -1,6 +1,5 @@
 const express = require('express')
 const pdf = require('express-pdf')
-const hpdf = require('html-pdf')
 const path = require('path')
 const app = express();
 
@@ -25,19 +24,6 @@ app.get('/', (req, res) => {
         datos = data
         res.send(data)
         console.log(data)
-
-/*         if (err) {
-            res.send(err);
-        }else {
-            hpdf.create(data).toFile("report.pdf", function (err, data) {
-                if (err) {
-                    res.send(err);
-                } else {
-                    res.send("File created successfully");
-                }
-            })
-        } */
-
     })
 
 }) 
